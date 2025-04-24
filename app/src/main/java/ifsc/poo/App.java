@@ -12,7 +12,7 @@ public class App {
             this.draw.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
             this.draw.setCanvasSize(1000,600);
             this.draw.setXscale(0,1000);
-            this.draw.setYscale(0,1000);
+            this.draw.setYscale(0,600);
             grade.desenhar(this.draw);
             // Ajusta o tamanho da tela usando algum método do objeto Draw
             // Ajusta a escala X usando algum outro método do objeto Draw
