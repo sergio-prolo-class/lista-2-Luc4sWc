@@ -46,4 +46,15 @@ ________________________________________________________________________________
 
 ________________________________________________________________________________________________
 
-<h1>👁 Preview</h>
+<h1>👁 Preview</h1>
+
+![Image](https://github.com/user-attachments/assets/80e9b28e-2722-43e3-a23b-5951f2e76287)
+________________________________________________________________________________________________
+
+<h1>🗒 Observações</h1>
+
+- Você pode modificar a posição dos quadrados pintados alterando as coordenadas no método ```desenhar_pintado```.
+
+- Se quiser adicionar interação (clicar nos quadrados, etc.), será preciso programar eventos de mouse na classe ```Draw```.
+
+> Essa é uma base perfeita para começar a desenvolver jogos de batalha naval, estratégia, entre outros.
