@@ -25,6 +25,11 @@ ________________________________________________________________________________
 <h1>🗄 Arquivos principais</h1>
 
 1. ```App.java```
+- Inicializa a janela ```Draw```, define o tamanho da tela e a escala do desenho.
+
+- Cria a primeira grade pintada e a segunda grade despintada com um espaçamento entre elas.
+
+2. ```Grade.java```
 - Contém os métodos:
 
     - ```desenhar_pintado(Draw a, int offsetX, int offsetY)```: desenha a grade preenchendo alguns quadrados de vermelho.
