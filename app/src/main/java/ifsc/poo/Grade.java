@@ -8,89 +8,41 @@ public class Grade {
     private final String[] letras = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
 
     public void desenhar_pintado(Draw a,int offsetX,int offsetY){
+
+        //pinta os quadrados
+        pintarCelula(a,2,3,offsetX,offsetY);
+        pintarCelula(a,3,3,offsetX,offsetY);
+        pintarCelula(a,4,3,offsetX,offsetY);
+        pintarCelula(a,5,3,offsetX,offsetY);
+
+        pintarCelula(a,0,0,offsetX,offsetY);
+        pintarCelula(a,0,1,offsetX,offsetY);
+        pintarCelula(a,0,2,offsetX,offsetY);
+        pintarCelula(a,0,3,offsetX,offsetY);
+
+        pintarCelula(a,1,5,offsetX,offsetY);
+        pintarCelula(a,2,5,offsetX,offsetY);
+        pintarCelula(a,3,5,offsetX,offsetY);
+
+        pintarCelula(a,5,7,offsetX,offsetY);
+        pintarCelula(a,6,7,offsetX,offsetY);
+        pintarCelula(a,7,7,offsetX,offsetY);
+
+        pintarCelula(a,8,1,offsetX,offsetY);
+        pintarCelula(a,8,2,offsetX,offsetY);
+
         int cont = 0;
-
         for (int i = 0; i < 10; i++) {
-
-            //pinta os quadrados
-            a.setPenColor(Draw.BOOK_RED);
-            a.filledSquare(257,162,21);
-            a.setPenColor(Color.BLACK);
-
-            a.setPenColor(Draw.BOOK_RED);
-            a.filledSquare(257,207,21);
-            a.setPenColor(Color.BLACK);
-
-            a.setPenColor(Draw.BOOK_RED);
-            a.filledSquare(257,252,21);
-            a.setPenColor(Color.BLACK);
-
-            a.setPenColor(Draw.BOOK_RED);
-            a.filledSquare(257,297,21);
-            a.setPenColor(Color.BLACK);
-
-            a.setPenColor(Draw.BOOK_RED);
-            a.filledSquare(257,342,21);
-            a.setPenColor(Color.BLACK);
-
-            a.setPenColor(Draw.BOOK_RED);
-            a.filledSquare(257,72,22);
-            a.setPenColor(Color.BLACK);
-
-            a.setPenColor(Draw.BOOK_RED);
-            a.filledSquare(212,72,22);
-            a.setPenColor(Color.BLACK);
-
-            a.setPenColor(Draw.BOOK_RED);
-            a.filledSquare(167,72,22);
-            a.setPenColor(Color.BLACK);
-
-            a.setPenColor(Draw.BOOK_RED);
-            a.filledSquare(122,72,22);
-            a.setPenColor(Color.BLACK);
-
-            a.setPenColor(Draw.BOOK_RED);
-            a.filledSquare(347,162,21);
-            a.setPenColor(Color.BLACK);
-
-            a.setPenColor(Draw.BOOK_RED);
-            a.filledSquare(347,207,21);
-            a.setPenColor(Color.BLACK);
-
-            a.setPenColor(Draw.BOOK_RED);
-            a.filledSquare(347,117,21);
-            a.setPenColor(Color.BLACK);
-
-            a.setPenColor(Draw.BOOK_RED);
-            a.filledSquare(212,432,21);
-            a.setPenColor(Color.BLACK);
-
-            a.setPenColor(Draw.BOOK_RED);
-            a.filledSquare(167,432,21);
-            a.setPenColor(Color.BLACK);
-
-            a.setPenColor(Draw.BOOK_RED);
-            a.filledSquare(437,387,21);
-            a.setPenColor(Color.BLACK);
-
-            a.setPenColor(Draw.BOOK_RED);
-            a.filledSquare(437,342,21);
-            a.setPenColor(Color.BLACK);
-
-            a.setPenColor(Draw.BOOK_RED);
-            a.filledSquare(437,297,21);
-            a.setPenColor(Color.BLACK);
-
             // Letras na esquerda
             a.setPenColor(Draw.BOOK_RED);//pinta a letra
             a.text(offsetX - 20, offsetY + i * pixels + pixels/2, letras[i]);
-            a.setPenColor(Color.BLACK);// pinta de preto pra não ficar tudo vermelho kkkk
+            a.setPenColor(Draw.BLACK);// pinta de preto pra não ficar tudo vermelho kkkk
             for (int j = 0; j < 10; j++) {
                 a.square(offsetX + j * pixels + pixels/2, offsetY + i * pixels + pixels/2, pixels/2.0);
                 if(cont == 0){
                     a.setPenColor(Draw.BOOK_RED);
                     a.text(offsetX + j * pixels + pixels/2, offsetY - 1 * pixels + pixels/2, String.valueOf(j));
-                    a.setPenColor(Color.BLACK);
+                    a.setPenColor(Draw.BLACK);
                     if(j == 9){
                         cont = 1;
                     }
@@ -105,13 +57,13 @@ public class Grade {
             // Letras na esquerda
             a.setPenColor(Draw.BOOK_RED);
             a.text(offsetX - 20, offsetY + p * pixels + pixels/2, letras[p]);
-            a.setPenColor(Color.BLACK);
+            a.setPenColor(Draw.BLACK);
             for(int o = 0; o < 10; o++){
                 a.square(offsetX + o * pixels + pixels/2, offsetY + p * pixels + pixels/2, pixels/2.0);
                 if(cont == 0){
                     a.setPenColor(Draw.BOOK_RED);
                     a.text(offsetX + o * pixels + pixels/2, offsetY - 1 * pixels + pixels/2, String.valueOf(o));
-                    a.setPenColor(Color.BLACK);
+                    a.setPenColor(Draw.BLACK);
                     if(o == 9){
                         cont = 1;
                     }
@@ -119,4 +71,14 @@ public class Grade {
             }
         }
     }
+
+    //Tive que criar pq essa cor usando draw mudou tudo
+    private void pintarCelula(Draw a, int linha, int coluna, int offsetX, int offsetY) {
+        int x = offsetX + coluna * pixels + pixels/2;
+        int y = offsetY + linha * pixels + pixels/2;
+        a.setPenColor(Draw.BOOK_RED);
+        a.filledSquare(x, y, pixels/2.0);
+        a.setPenColor(Draw.BLACK);
+    }
+
 }
