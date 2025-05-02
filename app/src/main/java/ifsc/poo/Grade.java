@@ -11,88 +11,90 @@ public class Grade {
         int cont = 0;
 
         for (int i = 0; i < 10; i++) {
+
+            //pinta os quadrados
+            a.setPenColor(Draw.BOOK_RED);
+            a.filledSquare(257,162,21);
+            a.setPenColor(Color.BLACK);
+
+            a.setPenColor(Draw.BOOK_RED);
+            a.filledSquare(257,207,21);
+            a.setPenColor(Color.BLACK);
+
+            a.setPenColor(Draw.BOOK_RED);
+            a.filledSquare(257,252,21);
+            a.setPenColor(Color.BLACK);
+
+            a.setPenColor(Draw.BOOK_RED);
+            a.filledSquare(257,297,21);
+            a.setPenColor(Color.BLACK);
+
+            a.setPenColor(Draw.BOOK_RED);
+            a.filledSquare(257,342,21);
+            a.setPenColor(Color.BLACK);
+
+            a.setPenColor(Draw.BOOK_RED);
+            a.filledSquare(257,72,22);
+            a.setPenColor(Color.BLACK);
+
+            a.setPenColor(Draw.BOOK_RED);
+            a.filledSquare(212,72,22);
+            a.setPenColor(Color.BLACK);
+
+            a.setPenColor(Draw.BOOK_RED);
+            a.filledSquare(167,72,22);
+            a.setPenColor(Color.BLACK);
+
+            a.setPenColor(Draw.BOOK_RED);
+            a.filledSquare(122,72,22);
+            a.setPenColor(Color.BLACK);
+
+            a.setPenColor(Draw.BOOK_RED);
+            a.filledSquare(347,162,21);
+            a.setPenColor(Color.BLACK);
+
+            a.setPenColor(Draw.BOOK_RED);
+            a.filledSquare(347,207,21);
+            a.setPenColor(Color.BLACK);
+
+            a.setPenColor(Draw.BOOK_RED);
+            a.filledSquare(347,117,21);
+            a.setPenColor(Color.BLACK);
+
+            a.setPenColor(Draw.BOOK_RED);
+            a.filledSquare(212,432,21);
+            a.setPenColor(Color.BLACK);
+
+            a.setPenColor(Draw.BOOK_RED);
+            a.filledSquare(167,432,21);
+            a.setPenColor(Color.BLACK);
+
+            a.setPenColor(Draw.BOOK_RED);
+            a.filledSquare(437,387,21);
+            a.setPenColor(Color.BLACK);
+
+            a.setPenColor(Draw.BOOK_RED);
+            a.filledSquare(437,342,21);
+            a.setPenColor(Color.BLACK);
+
+            a.setPenColor(Draw.BOOK_RED);
+            a.filledSquare(437,297,21);
+            a.setPenColor(Color.BLACK);
+
             // Letras na esquerda
-            a.setPenColor(Color.RED);//pinta a letra
+            a.setPenColor(Draw.BOOK_RED);//pinta a letra
             a.text(offsetX - 20, offsetY + i * pixels + pixels/2, letras[i]);
             a.setPenColor(Color.BLACK);// pinta de preto pra não ficar tudo vermelho kkkk
             for (int j = 0; j < 10; j++) {
                 a.square(offsetX + j * pixels + pixels/2, offsetY + i * pixels + pixels/2, pixels/2.0);
                 if(cont == 0){
-                    a.setPenColor(Color.RED);
+                    a.setPenColor(Draw.BOOK_RED);
                     a.text(offsetX + j * pixels + pixels/2, offsetY - 1 * pixels + pixels/2, String.valueOf(j));
                     a.setPenColor(Color.BLACK);
                     if(j == 9){
                         cont = 1;
                     }
                 }
-                //pinta os quadrados
-                a.setPenColor(Color.RED);
-                a.filledSquare(257,162,22);
-                a.setPenColor(Color.BLACK);
-
-                a.setPenColor(Color.RED);
-                a.filledSquare(257,207,22);
-                a.setPenColor(Color.BLACK);
-
-                a.setPenColor(Color.RED);
-                a.filledSquare(257,252,22);
-                a.setPenColor(Color.BLACK);
-
-                a.setPenColor(Color.RED);
-                a.filledSquare(257,297,22);
-                a.setPenColor(Color.BLACK);
-
-                a.setPenColor(Color.RED);
-                a.filledSquare(257,342,22);
-                a.setPenColor(Color.BLACK);
-
-                a.setPenColor(Color.RED);
-                a.filledSquare(257,72,22);
-                a.setPenColor(Color.BLACK);
-
-                a.setPenColor(Color.RED);
-                a.filledSquare(212,72,22);
-                a.setPenColor(Color.BLACK);
-
-                a.setPenColor(Color.RED);
-                a.filledSquare(167,72,22);
-                a.setPenColor(Color.BLACK);
-
-                a.setPenColor(Color.RED);
-                a.filledSquare(122,72,22);
-                a.setPenColor(Color.BLACK);
-
-                a.setPenColor(Color.RED);
-                a.filledSquare(347,162,22);
-                a.setPenColor(Color.BLACK);
-
-                a.setPenColor(Color.RED);
-                a.filledSquare(347,207,22);
-                a.setPenColor(Color.BLACK);
-
-                a.setPenColor(Color.RED);
-                a.filledSquare(347,117,22);
-                a.setPenColor(Color.BLACK);
-
-                a.setPenColor(Color.RED);
-                a.filledSquare(212,432,22);
-                a.setPenColor(Color.BLACK);
-
-                a.setPenColor(Color.RED);
-                a.filledSquare(167,432,22);
-                a.setPenColor(Color.BLACK);
-
-                a.setPenColor(Color.RED);
-                a.filledSquare(437,387,22);
-                a.setPenColor(Color.BLACK);
-
-                a.setPenColor(Color.RED);
-                a.filledSquare(437,342,22);
-                a.setPenColor(Color.BLACK);
-
-                a.setPenColor(Color.RED);
-                a.filledSquare(437,297,22);
-                a.setPenColor(Color.BLACK);
             }
         }
     }
@@ -101,13 +103,13 @@ public class Grade {
         int cont = 0;
         for(int p = 0; p < 10; p++){
             // Letras na esquerda
-            a.setPenColor(Color.RED);
+            a.setPenColor(Draw.BOOK_RED);
             a.text(offsetX - 20, offsetY + p * pixels + pixels/2, letras[p]);
             a.setPenColor(Color.BLACK);
             for(int o = 0; o < 10; o++){
                 a.square(offsetX + o * pixels + pixels/2, offsetY + p * pixels + pixels/2, pixels/2.0);
                 if(cont == 0){
-                    a.setPenColor(Color.RED);
+                    a.setPenColor(Draw.BOOK_RED);
                     a.text(offsetX + o * pixels + pixels/2, offsetY - 1 * pixels + pixels/2, String.valueOf(o));
                     a.setPenColor(Color.BLACK);
                     if(o == 9){
