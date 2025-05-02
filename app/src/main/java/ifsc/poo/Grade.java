@@ -72,7 +72,7 @@ public class Grade {
         }
     }
 
-    //Tive que criar pq essa cor usando draw mudou tudo e tive que arrumar
+    //Tive que criar pq essa cor usando draw mudou tudo e tive que arruma
     private void pintarCelula(Draw a, int linha, int coluna, int offsetX, int offsetY) {
         int x = offsetX + coluna * pixels + pixels/2;
         int y = offsetY + linha * pixels + pixels/2;
